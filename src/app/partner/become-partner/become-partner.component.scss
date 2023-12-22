@@ -1,0 +1,201 @@
+.background-container {
+  background-image: url('/assets/images/partner/partner.jpg');
+  background-size: cover; /* Adjust as needed */
+  background-position: center; /* Adjust as needed */
+  height: 300px; /* Set a height for the container */
+  color: rgb(27, 52, 133);
+  padding: 20px; /* Adjust padding as needed */
+}
+
+.text-overlay{
+  font-size: 150%;
+  font-style: bold;
+  font-weight: 400;
+  padding: 20px;
+}
+
+.head{
+  color: rgb(27, 52, 133);
+  font-size: 220%;
+  font-style: bold;
+  font-weight: 800;
+  width: 800px;
+  line-height: 1;
+}
+
+.info{
+  justify-content:center; 
+  margin-top: 30px;
+  font-size: 90%;
+  width: 500px;
+  font-weight: 500;
+}
+
+.col-md-6{
+  width: 100%;
+  padding-right: 0px !important;
+  padding-left: 80px;
+  user-select: none;
+  cursor: default; 
+}
+
+.col-md-4{
+  padding: 40px;
+  text-align: left;
+}
+
+.form{
+  padding: 40px;
+}
+
+img{
+  padding-left: 90px;
+  width : 60%;
+}
+
+.row{
+  padding : 40px;
+}
+
+.form-row{
+  padding : 60px;
+}
+
+h1{
+  color: black;
+  font-size: 260%;
+}
+
+h2{
+  color:white;
+  font-size: 260%;
+  font-weight: 30%;
+  padding: 30px;
+}
+
+h3{
+  color:white;
+  font-size: 200%;
+  font-weight: 60%;
+}
+
+p{
+  font-size: 120%;
+  text-align: justify;
+}
+
+.secondWidget{
+  background-color: rgb(72, 76, 92) !important;
+  color:  white;
+  padding:30px;
+}
+
+li{
+  font-size: 120%;
+  text-align: justify;
+}
+
+/* Global label style */
+label {
+  font-size: 16px;
+  color: #333; /* Set label text color */
+}
+
+/* Form input style */
+.input-group {
+  margin-bottom: 15px;
+}
+
+.form-container {
+  background-color: #fff; /* Set form background color to white */
+  border: 2px solid #ff5e00; /* Set form border color to orange */
+  border-radius: 8px; /* Set border radius */
+  box-shadow: 0 0 10px #ff5e00; /* Set outer shadow with orange color */
+  padding: 20px;
+}
+
+/* Form input style */
+.form-control {
+  border: 1px solid #ffa500; /* Set input border color to orange */
+  border-radius: 5px; /* Set border radius */
+  padding: 8px;
+  transition: border-color 0.3s; /* Add transition effect for border color change */
+}
+
+.form-control:focus {
+  border-color: #ff4800; /* Set input border color on focus to a slightly darker orange */
+  box-shadow: 0 0 10px #ff5e00;/* Set outer shadow with orange color */
+  
+}
+/* Error message style */
+.text-danger {
+  color: #dc3545; /* Set error message color */
+  font-size: 14px;
+}
+
+/* Add this style to your component's styles or in a global stylesheet */
+.registration-form {
+  background-color: #ffefd5; /* This is a light orange shade, you can adjust the color code */
+  padding: 20px; /* Add padding for spacing inside the form */
+  border-radius: 10px; /* Add border radius for rounded corners */
+}
+
+/* Optional: Add a box shadow for a subtle effect */
+.registration-form {
+  box-shadow: 0 4px 10px rgb(248, 92, 19); /* Adjust the shadow as needed */
+  padding-right: 40px;
+}
+
+/* Optional: Adjust the border color and width */
+.registration-form {
+  border: 2px solid #ffa500; /* Border color set to orange */
+}
+
+.registration-form button {
+  color: white;
+  border: none;
+  padding: 5px;
+  margin-right: 20px;
+  border-radius: 4px;
+  border-width: 50%;
+  font-weight: 20%;
+  cursor: pointer;
+}
+
+.registration-form button:hover {
+  color: rgb(245, 84, 10);
+  background-color: white;
+  border-radius: 4px;
+  border-color:  rgb(245, 84, 10);
+  box-shadow: 2px 2px 4px rgb(245, 84, 10);
+  border-width: 50%;
+  font-weight: 22%;
+}
+
+.registration-form select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+.form-control{
+  border-radius: 4px;
+  
+}
+
+label, select, option{
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.error-container {
+  margin-top: 5px; /* Adjust the top margin to provide space between input and error messages */
+  height: 40px; /* Set a fixed height for the error container, adjust as needed */
+  overflow: hidden; /* Hide overflow to keep the space even when there are no errors */
+}
+
+.required {
+  color: red; /* Customize the color of the asterisk */
+  margin-left: 2px; /* Add some space between the label text and the asterisk */
+}

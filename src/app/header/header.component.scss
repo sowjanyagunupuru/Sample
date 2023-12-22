@@ -1,0 +1,139 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:white;
+    padding-right: 30px;
+    user-select: none;
+    cursor: pointer; 
+  
+    img {
+      vertical-align: middle;
+      border-style: none;
+      width: 150px;
+      cursor: pointer; 
+  }
+  .logo-container{
+    cursor: pointer; 
+   margin-left: 100px; 
+   width: 37%; /* Initial size */
+   max-width: 100%; /* Ensure the image doesn't exceed its natural size */
+   height: auto;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 10px;
+      color: black;
+      cursor: pointer; 
+    }
+   
+.menu {
+  color:  #0a0a0a;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  
+  .down-indicator {
+    margin-left: 5px;
+  }
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  margin-left: 0;
+  padding: 2px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu li {
+  margin-left: 25px;
+  margin-right: 70px; /* Adjust the margin as needed */
+}
+
+.menu a {
+  text-decoration: none;
+  color: #0a0a0a; 
+  padding: 10px 10px;
+  cursor: pointer;
+}
+
+.menu a:hover {
+  background-color:  white;
+  border-color : black;
+  border-radius: 12px;
+  padding: 6px 10px;
+  color:  rgb(255, 81, 0);
+  box-shadow: 2px 2px 4px rgb(245, 84, 10);
+}
+
+.menu  li.active  {
+  background-color:  white;
+  border-color : black;
+  border-radius: 12px;
+  color:  rgb(255, 81, 0);
+  box-shadow: 2px 2px 4px rgb(245, 84, 10);
+}
+
+.dropdown-menu{
+ border-bottom: #0a0a0a;
+ z-index: 11;
+}
+.dropdown-item {
+  border-bottom: 1px solid rgb(255, 81, 0); /* Add a bottom border with a thin line and color of your choice */
+  z-index: 11;
+}
+
+.custom-dropdown-item {
+  color: #333; 
+  font-weight: normal; 
+  transition: background-color 0.3s;
+}
+
+.dropdown-item:last-child {
+  border-bottom: none; /* Remove the bottom border for the last item to avoid a double line */
+}
+/* Additional styles for the "Back" and "Toggle Background" buttons */
+.menu button {
+  font-weight: bold;
+  padding: 4px 10px;
+  color: #0a0a0a;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .menu ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu li {
+    margin-bottom: 10px;
+  }
+}
+
+}
+
+#time{
+  text-align: right;
+  white-space: nowrap;
+  flex: 0 0 auto;
+}
+
+
+.show-dropdown
+{
+  display: block !important;
+  padding: auto;
+  margin: 2px;
+  border-radius: 5%;
+  border-color:  rgb(245, 84, 10);
+  box-shadow: 2px 2px 4px rgb(245, 84, 10);
+  font-weight: 100;
+}

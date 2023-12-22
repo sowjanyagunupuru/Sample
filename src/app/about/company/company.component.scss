@@ -1,0 +1,131 @@
+.head{
+    color: rgb(27, 52, 133);
+    font-size: 220%;
+    font-style: bold;
+    font-weight: 800;
+}
+
+.col-md-7{
+    font-size: 150%;
+    font-style: bold;
+    font-weight: 400;
+}
+
+.col-md-4{
+    padding-left: 120px;
+}
+
+.row{
+    padding: 20px;
+    padding-left: 30px;
+    background-color: rgb(200, 219, 231);
+}
+
+.info{
+    justify-content:center; 
+    margin-top: 30px;
+    font-size: 90%;
+    width: 500px;
+}
+
+.form{
+    padding: 80px ;
+}
+
+.w-50 {
+    width: 60% !important;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -5px;
+    margin-left: -5px;
+    width: 120%;
+    padding-bottom: 20px;
+  
+}
+
+h1,h2,h3{
+    font-size: 220%;
+    font-style: bold;
+    font-weight: 800;
+    text-align: justify;
+    color: #ff7b00;
+  }
+
+  h2{
+    color: #030303 !important;
+  }
+
+  h3,h4{
+    color: white !important;
+  }
+
+  h4{
+    font-size: 190%;
+    font-style: bold;
+    font-weight: 600;
+    text-align: justify;
+  }
+
+  .infor{
+    justify-content:center; 
+    text-align: justify;
+    font-style: bold;
+    font-weight: 180;
+    font-size: 120%;
+    line-height: 1.5;
+    padding-right: 30px;
+  }
+
+  .value{
+    padding-top: 20px;
+    padding-left: 80px;
+    padding-right: 80px;
+    background-color: rgb(129, 212, 185);
+  }
+
+  .data{
+    padding: 80px;
+    color: white;
+  }
+
+  .block{
+    padding-left: 100px;
+  }
+
+  .founder{
+    padding: 100px;
+  }
+
+  .sub{
+    background-color: white;
+    text-align: justify;
+    padding: 20px;
+  }
+
+  .company{
+    background-color: rgb(247, 242, 236) ;
+  }
+
+  button{
+    margin-top: 120px;
+    color: #fff; 
+    background-color: rgb(252, 118, 56); 
+    border-color: rgb(245, 84, 10);
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 20px 36px;
+    user-select: none;
+  }
+
+  button:hover {
+    background-color:   rgb(245, 84, 10);
+    border-color: rgb(252, 118, 56);
+}
+
+img{
+  user-select: none;
+  cursor: default; 
+}

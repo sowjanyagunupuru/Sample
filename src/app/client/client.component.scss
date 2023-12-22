@@ -1,0 +1,45 @@
+.background-container {
+    background-image: url('/assets/images/clients/background.jpg');
+    background-size: cover; /* Adjust as needed */
+    background-position: center; /* Adjust as needed */
+    height: 300px; /* Set a height for the container */
+    color: rgb(27, 52, 133);
+    padding: 20px; /* Adjust padding as needed */
+  }
+
+  .text-overlay{
+    font-size: 150%;
+    font-style: bold;
+    font-weight: 400;
+    padding: 20px;
+  }
+
+  .head{
+    color: rgb(27, 52, 133);
+    font-size: 220%;
+    font-style: bold;
+    font-weight: 800;
+    width: 800px;
+    line-height: 1;
+}
+
+.info{
+    justify-content:center; 
+    margin-top: 30px;
+    font-size: 90%;
+    width: 500px;
+    font-weight: 500;
+}
+
+.form{
+    padding: 40px;
+}
+
+h2{
+    font-size: 220%;
+    font-weight: 600;
+}
+
+.carousel-indicators li{
+    box-sizing: inherit !important;
+}

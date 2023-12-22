@@ -1,0 +1,65 @@
+.header{
+  position: fixed;
+  margin-top: 0;
+  background-color: white;
+  z-index: 10;
+}
+
+body {
+  //margin: 0;
+  font-family: Arial, sans-serif; /* Set a default font */
+}
+
+div {
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.main-content{
+  padding-top: 60px;
+  padding-left: 0px !important;
+}
+
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  background-color: #2C394B ;
+  color: #fff;
+  text-align: center;
+  padding: 6px;
+    a {
+      color: #fff;
+      text-decoration: underline;
+    }
+  }
+
+
+.sidebar {
+    width: 200px;
+    position: fixed;
+}
+
+button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 10;
+  padding-top: 10px;
+  border-width: 50%;
+  border-radius: 4px;
+}
+
+button.show {
+  display: block;
+}
+
+button:hover{
+  color: rgb(245, 84, 10);
+  background-color: white;
+  border-radius: 4px;
+  border-color:  rgb(245, 84, 10);
+  box-shadow: 2px 2px 4px rgb(245, 84, 10);
+  border-width: 50%;
+}

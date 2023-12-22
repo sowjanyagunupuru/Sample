@@ -1,0 +1,28 @@
+.background-container {
+    background-image: url('/assets/images/footer/background.jpg');
+    background-size: cover; /* Adjust as needed */
+    background-position: center; /* Adjust as needed */
+    height: 300px; /* Set a height for the container */
+    position: static;
+    color: rgb(27, 52, 133);
+    padding: 20px; /* Adjust padding as needed */
+  }
+
+  .head{
+    color: rgb(27, 52, 133);
+    font-size: 250%;
+    font-style: bold;
+    font-weight: 800;
+    width: 800px;
+    line-height: 1;
+}
+
+p{
+    justify-content:center; 
+    text-align: justify;
+    font-style: bold;
+    font-weight: 180;
+    font-size: 120%;
+    line-height: 1.5;
+    padding-right: 30px;
+}

@@ -1,0 +1,56 @@
+<div class="home" >
+  <!-- <div *ngIf="log()" class="alert alert-success alert-dismissible">
+    <a href="#home" class="close" aria-label="close">&times;</a>
+    <strong>Success!</strong> Successfully Logged in.
+  </div> -->
+  
+  <h2><b>We are Pennant</b></h2>
+  <body>
+    <p>Pennant Technologies is an agile, innovative financial technology company that powers the lending operations of 
+    global banks and financial institutions. Its suite of future ready lending products and solutions offer banks composable 
+    features and scalable capabilities to deliver differentiated loan origination, servicing and collections experiences 
+    for their customers. Trusted by leading banks and financial institutions in Asia, Pennant’s award winning lending 
+    platform has managed more than 14 Million loans and facilitates 100 Million loan transactions per year.</p>
+    <p>We build highly configurable, future-ready fintech products and platforms that enable banks 
+    and financial institutions to adapt, innovate and scale for higher business growth and increased profitability.</p></body>
+
+  <!-- Moving line of sentences -->
+  <div class="moving-line-container">
+    <div class="moving-line">
+      <p>To build innovative products and solutions with the highest level of passion and integrity that enable 
+        you to transform, disrupt, and deliver differentiated value to your customers.                         
+        We play a proactive role in helping our clients meet their customers’ needs irrespective of the size of the company.                          
+        Pennant’s interest in long-term business relationships also made us the most trusted partner in the BFSI sector.</p>
+    </div>
+
+    <carousel id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <slide class="carousel-item">
+          <img class="d-block w-100  imageform"  src="assets/images/carousel/nasscom.jpg" alt="First slide">
+        </slide>
+        <slide class="carousel-item">
+          <img class="d-block w-100 imageform" src="assets/images/carousel/pennantIBM.jpg" alt="Second slide">
+        </slide>
+        <slide class="carousel-item">
+          <img class="d-block w-100 imageform" src="assets/images/carousel/pennantCoba.jpg" alt="Third slide">
+        </slide>
+        <slide class="carousel-item">
+          <img class="d-block w-100 imageform" src="assets/images/carousel/pennantLendingFactory.jpg" alt="Fourth slide">
+        </slide>
+      </div>
+    </carousel>
+
+  </div>
+
+  <div class="form-container">
+    <div class="col">
+      <li><p class="d-inline">To know more about us </p>
+        <a [routerLink]="['/bodylevel']" class="blink-text text-danger">Go to More</a> </li> 
+    </div>  
+    <div class="col"> 
+      <li><p class="d-inline">To know about the clients and partners </p>
+        <a [routerLink]="['/bodylevel']" class="blink-text text-danger">Go to More</a></li>  
+    </div>
+  </div>
+</div>
+

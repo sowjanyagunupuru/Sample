@@ -1,0 +1,126 @@
+.head{
+  color: rgb(27, 52, 133);
+  font-size: 220%;
+  font-style: bold;
+  font-weight: 800;
+}
+
+.col-md-7{
+  font-size: 150%;
+  font-style: bold;
+  font-weight: 400;
+}
+
+.form-row{
+  padding: 20px;
+  padding-left: 50px;
+  background-color: rgb(200, 219, 231);
+}
+
+.format{
+    margin-left: 180px;
+    margin-bottom: 30px;
+ }
+
+.heading{
+    margin-top: 20px;
+    font-size: 24px;
+    color: rgb(216, 82, 19);
+    font-weight: bold;
+}
+
+.row{
+    padding-bottom: 30px;
+}
+.icon {
+    text-align: center;
+  }
+  
+  .leader-name {
+    font-size: 18px;
+    color: rgb(216, 82, 19);
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .leader-role {
+    text-align: center;
+    font-size: 16px;
+    color: black;
+  }
+
+  .lead-name {
+    font-size: 16px;
+    color: rgb(70, 26, 173);
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .lead-role {
+    text-align: center;
+    font-size: 14px;
+    color: black;
+  }
+
+.head{
+    font-size: 22px;
+    color: rgb(26, 48, 173);
+    font-weight: bold;
+}
+
+.info{
+    text-align: justify;
+    font-size: 18px;
+    padding-top: 10px;
+    color: black;
+}
+
+button{
+  margin-bottom: 5px;
+  background-color: white !important;
+  border: none !important;
+  font-size: 16px !important;
+  border-radius: 12px !important;
+  user-select: none;
+  cursor: pointer; 
+}
+
+button:hover {
+  background-color: white!important;
+  border-color: black!important;
+  color: rgb(255, 81, 0)!important;
+  box-shadow: 2px 2px 4px rgb(245, 84, 10)!important;
+  user-select: none;
+  cursor: pointer; 
+}
+
+.down-indicator {
+    margin-left: 5px;
+}
+
+.image-container {
+  display: flex;
+  align-items: center;
+  background-color: antiquewhite;
+  margin-top: 10px;
+  padding-top: 30px;
+}
+
+.name{
+  text-align: right;
+  margin-left: 10px; 
+  font-size: 26px;
+  color: rgb(216, 82, 19);
+  font-weight: bold;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.imageicon{
+  margin-left: 200px;
+}
+
+.col-md-4, .col-md-3{
+  user-select: none !important;
+  cursor: default; 
+}

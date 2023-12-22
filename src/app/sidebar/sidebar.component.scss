@@ -1,0 +1,106 @@
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/brands';
+
+.side-menu {
+  width: 220px;
+  height: 90vh; /* Use 100vh to make the side menu full height of the viewport */
+  background-color: #3b3b3b;
+  color: #fff;
+  padding-right: 0px !important;
+  margin-bottom: 20px;
+  flex-direction: column; /* Stack items vertically */
+  justify-content: space-between; /* Space items vertically */
+  position: fixed;
+  transition: width 0.3s ease; /* Add transition for smooth width changes */
+  padding-top: 40px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.col-md-3{
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    padding-bottom: 30px !important;
+    transition: width 0.3s ease !important;
+    user-select: none;
+    cursor: default; 
+  }
+  
+  .menu-options {
+    display: flex;
+    flex-direction: column;
+    padding-right: 50px;
+  }
+  
+  .menu-option {
+    padding: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 15px;
+    white-space: nowrap;
+    margin-right: -42px;
+  }
+  
+  .menu-option:hover {
+  background-color:  rgb(233, 226, 226);
+  border-color : black;
+  border-radius: 18px;
+  color:  rgb(255, 81, 0);
+  box-shadow: 2px 2px 4px rgb(245, 84, 10);
+  }
+  
+  .menu-option:not(:hover) {
+    background-color: #3b3b3b;
+    color: #fff;
+  }
+
+  .dropdown-content{
+    padding-left: 20px;
+  }
+
+  .menu-option i{
+    margin-right: 5px;
+  }
+
+  .side-menu.collapsed {
+    width: 20px; /* Set the collapsed width as needed */
+
+  }
+  
+  .collapse-btn {
+    cursor: pointer;
+    position: absolute;
+    bottom: 5;
+    background-color: #3b3b3b;
+    left: 0; /* Adjust the left position if needed */
+    color: #fff; /* Set the text color for the button */
+    padding-right: 25px;
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 8px;
+    font-size: 11px;
+    display: flex;
+  }
+
+  .collapse-btn:hover {
+    cursor: pointer;
+    background-color:  rgb(233, 226, 226);
+    border-color : black;
+    border-radius: 18px;
+    color:  rgb(255, 81, 0);
+    box-shadow: 2px 2px 4px rgb(245, 84, 10);
+    margin-right:10px;
+  }
+
+  .col-md-3.collapsed {
+    width: 60px; /* Set the collapsed width as needed */
+  }
+
+  .col-md-3.collapsed + .col-md-9 {
+    margin-left: 60px; /* Adjust the margin-left when the sidebar is collapsed */
+  }

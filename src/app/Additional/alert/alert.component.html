@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body *ngIf="showAlert" class="alert {{messageType === 'error' ? 'error' : 'success'}}">
+    <div>
+    <div class="row">
+        <div class="col"><h1>Alert</h1></div>
+        <div class="col" > 
+            <button type="button" class="close" (click)="closeAlert()">
+            <span>&times;</span>
+          </button>
+        </div>
+    </div>
+    <p>{{message}}</p>
+    </div>
+  </body>
+  </html>

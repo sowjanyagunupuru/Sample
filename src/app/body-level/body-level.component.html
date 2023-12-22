@@ -1,0 +1,57 @@
+<div class="body-level" >
+  <div class="row">
+    <div class="col-md-2" id="sideDiv" >
+      <app-sidebar  (newSelectedOption)="handleSelectedOption($event)"></app-sidebar>
+      <!--gets the value newSelectedOption from the sidemenu and then pass to the handleSelectedOption 
+        method to set tot hte option which we use to view the page-->    
+    </div>
+
+    <div class="col-md-10" id="mainDiv">
+        
+        <div class="container_body">
+
+          <div *ngIf="option === ''">
+            <div class="container">
+              <carousel [itemsPerSlide]="2">
+                <slide *ngFor="let image of images">
+                  <img [src]="image" alt="Image">
+                </slide>
+              </carousel>
+            </div>
+    
+            <div class="form">
+              <h2>Trusted by clients from around the world</h2>
+              <div class="container">
+                  <carousel [itemsPerSlide]="4">
+                    <slide *ngFor="let image of clientImages">
+                      <img [src]="image" alt="Image">
+                    </slide>
+                  </carousel>
+              </div>
+            </div>
+          </div>
+
+          <div *ngIf="option === 'Leader'"> 
+              <app-leaders></app-leaders>
+          </div>
+        
+          <div *ngIf="option === 'Partners'">
+              <app-partner-ship></app-partner-ship>
+          </div>
+        
+          <div *ngIf="option === 'BecomePartner'">
+            <app-become-partner></app-become-partner>>
+          </div>
+
+          <div *ngIf="option === 'Clients'"> 
+              <app-client></app-client>
+          </div>
+        
+          <div *ngIf="option === 'Products'"> 
+             <app-product></app-product>
+          </div>
+          
+      </div>
+    </div>
+  </div>
+</div>

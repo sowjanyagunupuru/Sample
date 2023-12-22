@@ -1,0 +1,30 @@
+
+<div class="header">
+  <div class="logo-container">
+    <img style=" user-select: none; cursor: default; " src="https://pennanttech.com/wp-content/uploads/2021/08/Pennant-logo-color-1.png">
+  </div>
+  <div *ngIf="!isLoginPage()" class="menu" >
+      <ul>
+        <li [ngClass]="{'active': activeItem === 'home'}"><a (click)="home()">Home </a></li>
+        <li [ngClass]="{'active': activeItem === 'product'}"><a (click)="product()">Products </a></li>
+        <li [ngClass]="{'active': activeItem === 'leader'}"><a (click)="leader()">Leaders </a></li>
+        <li class="nav-item dropdown" (mouseover)="onAboutMouseOver()" (mouseout)="onAboutMouseOut()">
+          <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  (click)="toggleAboutDropdown()">
+            About</a>
+            <div class="dropdown-menu" [ngClass]="{'show-dropdown': isAboutClicked}" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item custom-dropdown-item" [routerLink]="['/ourstory']">Our Story</a>
+              <a class="dropdown-item custom-dropdown-item" [routerLink]="['/company']">Company</a>
+              <a class="dropdown-item custom-dropdown-item" [routerLink]="['/partnerShip']">Partners</a>
+              <a class="dropdown-item custom-dropdown-item" [routerLink]="['/client']">Clients</a>
+            </div>            
+        </li>
+        <li [ngClass]="{'active': activeItem === 'contact'}"><a (click)="contact()">Contact</a></li>
+        <li [ngClass]="{'active': activeItem === 'more'}"><a (click)="more()">More </a></li>
+        <!-- <li *ngIf="!log()"><a (click)="signIn()">Login</a></li>
+        <li *ngIf="log()"><a (click)="signOut()">Logout</a></li> -->
+        <li id="time">
+      <span>Time: {{ currentTime | date: 'mediumTime' }}</span>
+      </li>
+      </ul>
+  </div>
+</div>

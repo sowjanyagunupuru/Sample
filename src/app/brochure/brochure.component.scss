@@ -1,0 +1,65 @@
+.background-container {
+    background-image: url('/assets/images/brochure/image.jpg');
+    background-size: cover; /* Adjust as needed */
+    background-position: center; /* Adjust as needed */
+    height: 300px; /* Set a height for the container */
+    color: rgb(27, 52, 133);
+    padding: 20px; /* Adjust padding as needed */
+  }
+  
+  .text-overlay{
+    font-size: 150%;
+    font-style: bold;
+    font-weight: 400;
+    padding: 20px;
+  }
+  
+  .head{
+    color: rgb(27, 52, 133);
+    font-size: 220%;
+    font-style: bold;
+    font-weight: 800;
+    width: 800px;
+    line-height: 1;
+  }
+  
+  .info{
+    justify-content:center; 
+    margin-top: 30px;
+    font-size: 90%;
+    width: 500px;
+    font-weight: 500;
+    color: black;
+  }
+
+  form{
+    padding: 30px;
+  }
+  
+  h2{
+    padding-top: 40px;
+    padding-left: 60px;
+    color:rgb(240, 108, 46);
+    font-size: 260%;
+    font-style: bold;
+    font-weight: 800;
+  }
+
+  .para{
+    text-align: justify;
+    padding-left: 60px;
+    color:black;
+    font-size: 130%;
+    font-weight: 400;
+    width: 80%;
+    line-height: 1.5;
+  }
+
+  ul{
+    padding-left: 80px;
+    color:rgb(23, 24, 133);
+    font-size: 120%;
+    font-weight: 200;
+    line-height: 1.5;
+    padding-bottom: 30px;
+  }

@@ -1,0 +1,25 @@
+// scroll-indicator.component.scss
+:host {
+    display: block;
+  }
+
+    .progress-container {
+      width: 100%;
+      height: 5px;
+      background-color:white;
+      position: fixed;
+      top: 60PX;
+      z-index: 10;
+      width: 100%;
+      text-align: center;
+      padding-bottom: 0px !important;
+ }
+  
+    .progress-bar {
+      height: 5px;
+      background: linear-gradient(to right, #f39b78, #f83905); /* Light orange to dark orange gradient */
+      width: 0%;
+    }
+
+
+  

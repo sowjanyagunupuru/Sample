@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <div class="col-md-3" [ngClass]="{'collapsed': isCollapsed}">
+        <div class="side-menu"  id = "sidebar" (click)="handleSideMenuClick($event)">
+            <div class="menu-options">
+                <div class="menu-option" (click)="selectedOption('Leader')">
+                    <i class="fas fa-user"></i> <span *ngIf="!isCollapsed">Leaders</span>
+                </div>
+                <div class="menu-option" (click)="toggleDropdown('partnerEcosystem')">
+                    <i class="fas fa-users"></i><span *ngIf="!isCollapsed">Partner EcoSystem </span>
+                </div>
+                <div class="dropdown-content" *ngIf="showDropdown.partnerEcosystem">
+                    <div class="menu-option" (click)="selectedOption('Partners')">
+                        <i class="fas fa-users"></i><span *ngIf="!isCollapsed">Partners</span>
+                    </div>
+                    <div class="menu-option" (click)="selectedOption('BecomePartner')">
+                        <i class="fas fa-user-plus"></i><span *ngIf="!isCollapsed"> Become a Partner </span>
+                    </div>
+                </div>
+                <div class="menu-option" (click)="selectedOption('Clients')">
+                    <i class="fas fa-building"></i><span *ngIf="!isCollapsed">Clients</span>
+                </div>
+                <div class="menu-option" (click)="selectedOption('Products')">
+                    <i class="fas fa-box"></i><span *ngIf="!isCollapsed">Products</span>
+                </div>
+            </div>
+        </div>
+        <div class="collapse-btn" style="position: fixed !important;  user-select: none;
+        cursor: pointer; " (click)="toggleCollapse()">
+           
+            <i class="fas" [ngClass]="{'fa-chevron-left': !isCollapsed, 'fa-chevron-right': isCollapsed}"></i><span *ngIf="!isCollapsed"> Collapse</span>
+            
+        </div>
+    </div>
+</body>
+</html>

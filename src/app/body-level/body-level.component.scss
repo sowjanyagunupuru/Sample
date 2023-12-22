@@ -1,0 +1,54 @@
+.container {
+    width: 100%;
+    margin: auto;
+  }
+  
+  .carousel-image {
+    width: 150%; 
+    height: 150%; 
+    display: block; 
+    margin: 0 auto; 
+  }
+  
+  .form{
+    padding: 40px;
+}
+
+h2{
+    font-size: 220%;
+    font-weight: 600;
+}
+
+.col-md-10{
+  padding-left:0px !important;
+  transition: margin-left 0.3s ease  !important;
+  user-select: none;
+  cursor: default;      
+  transition: width 0.3s ease;
+}
+
+.col-md-2{
+  transition: width 0.3s ease;
+}
+
+
+.col-md-2.collapsed + .col-md-10 {
+  margin-left: 60px; /* Adjust the margin-left when the sidebar is collapsed */
+}
+
+.col-md-11{
+  padding-left:0px !important;
+  transition: margin-left 0.3s ease  !important;
+  user-select: none;
+  cursor: default;      
+  transition: width 0.3s ease;
+}
+
+.col-md-1{
+  transition: width 0.3s ease;
+}
+
+
+.col-md-1.collapsed + .col-md-11 {
+  margin-left: 60px; /* Adjust the margin-left when the sidebar is collapsed */
+}

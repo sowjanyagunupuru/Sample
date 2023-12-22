@@ -1,0 +1,21 @@
+<div class="client">
+    <div class="background-container">
+        <div class="text-overlay">
+                <h1 class="head">Accelerating your Digital Journey</h1>
+                <div class="info">
+                    <p>Conceive, Optimise, Transform</p>
+                </div>            
+        </div>
+    </div>
+
+    <div class="form">
+        <h2>Trusted by clients from around the world</h2>
+        <div class="container">
+            <carousel [itemsPerSlide]="4">
+              <slide *ngFor="let image of images">
+                <img [src]="image" alt="Image">
+              </slide>
+            </carousel>
+          </div>
+    </div>
+</div>
