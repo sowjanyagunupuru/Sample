@@ -1,16 +1,16 @@
-<div *ngIf="!log(); else loggedOut" class="foot-container">
+<div class="foot-container">
   <div class="row">
       <div class="col-md-3">
         <img src="\assets\images\MergedImages.png">
       </div>
-      <div class="col-md-9" style="padding-left:55% !important; padding-top:2% !important">
-              <a class= "icon" href="#" class="fa fa-facebook"></a>
-              <a class= "icon" href="https://x.com/pennanttech?t=NnoM-wdj62lboy_nweq3rQ&s=08" class="fa fa-twitter"></a>
-              <a class= "icon" href="https://www.linkedin.com/company/pennant-technologies/" class="fa fa-linkedin"></a>
-              <a class= "icon" href="https://youtube.com/@pennanttechnologies8844?si=MdjWDU54Mu1haLJ8" class="fa fa-youtube"></a>
-              <a class= "icon" href="#" class="fa fa-instagram"></a>
+      <div class="col-md-9" style="padding-left:55% !important; padding-top:2% !important;cursor: pointer;"> 
+          <a href="#"> <div class= "icon" class="fa fa-facebook"></div> </a>
+          <a href="https://x.com/pennanttech?t=NnoM-wdj62lboy_nweq3rQ&s=08"> <div class= "icon" class="fa fa-twitter"></div></a>
+          <a href="https://www.linkedin.com/company/pennant-technologies/"> <div class= "icon" class="fa fa-linkedin"></div></a>
+          <a href="https://youtube.com/@pennanttechnologies8844?si=MdjWDU54Mu1haLJ8"><div class= "icon" class="fa fa-youtube"></div></a>
+          <a href="#"> <div class= "icon" class="fa fa-instagram"></div></a>
       </div>
-  </div>
+    </div>
    <div class="row">
 
     <div class="col-md-4">
@@ -34,6 +34,7 @@
 
     <div class="col-md-2">
       <h3>RESOURCES</h3>
+      <a [routerLink]="['/insight']">Insights</a><br>
       <a [routerLink]="['/brochure']">Brochures</a><br>
     </div>
 
@@ -41,57 +42,16 @@
       <h3>SUPPORT</h3>
       <a [routerLink]="['/contact']">Contact</a><br>
       <a [routerLink]="['/becomePartner']">Become a Partner</a><br>
+      <a class="anchor" (click)="showRegistrationForm()">Request a Demo</a>
     </div>
 
   </div>
 </div>
 
-<ng-template #loggedOut>
-  <div class="foot-container">
-    <div class="col-md-3">
-      <img src="\assets\images\MergedImages.png">
-      
-    </div>
-    <div class="row">
-  
-      <div class="col-md-4">
-        <div class="logo-container">
-          <p>Pennant Technologies is an agile, innovative financial technology company that powers the lending operations of global banks and financial institutions. Its suite of future ready lending products and solutions offer banks composable features and scalable capabilities to deliver differentiated loan origination, servicing and collections experiences for their customers. Trusted by leading banks and financial institutions in Asia, Pennant’s award winning lending platform has managed more than 14 Million loans and facilitates 100 Million loan transactions per year.</p>
-        </div>    
-      </div>
-  
-      <div class="col-md-2">
-        <h3>ABOUT US</h3>
-        <a >Company</a><br>
-        <a >Our Story</a><br>
-        <a >Partners</a><br>
-      </div>
-  
-      <div class="col-md-2">
-        <h3>PRODUCTS</h3>
-        <a >Lending Factory</a><br>
-        <a >Clients</a><br>
-      </div>
-  
-      <div class="col-md-2">
-        <h3>RESOURCES</h3>
-        <a >Brochures</a><br>
-      </div>
-  
-      <div class="col-md-2">
-        <h3>SUPPORT</h3>
-        <a >Contact</a><br>
-        <a>Become a Partner</a><br>
-      </div>
-  
-    </div>
-  </div>
-</ng-template>
-
 <div class="footer">
   <div class="row">
     <div class="col-md-4">
-      <p>&© 2022 All Rights Reserved, Pennant Technologies.</p>
+      <p>© 2022 All Rights Reserved, Pennant Technologies.</p>
     </div>
     <div class="col-md-6">
      

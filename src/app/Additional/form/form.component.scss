@@ -1,0 +1,194 @@
+.col-md-6{
+  width: 100%;
+  padding-right: 0px !important;
+  padding-left: 80px;
+  user-select: none;
+  cursor: default; 
+}
+
+/* Form input style */
+.input-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-container {
+    background-color: #fff; /* Set form background color to white */
+    border: 2px solid #ff5e00; /* Set form border color to orange */
+    border-radius: 8px; /* Set border radius */
+    box-shadow: 0 0 10px #ff5e00; /* Set outer shadow with orange color */
+    padding: 20px;
+  }
+  
+  /* Form input style */
+  .form-control {
+    border: 1px solid #ffa500; /* Set input border color to orange */
+    border-radius: 5px; /* Set border radius */
+    padding: 8px;
+    transition: border-color 0.3s; /* Add transition effect for border color change */
+  }
+  
+  .form-control:focus {
+    border-color: #ff4800; /* Set input border color on focus to a slightly darker orange */
+    box-shadow: 0 0 10px #ff5e00;/* Set outer shadow with orange color */
+    
+  }
+  /* Error message style */
+  .text-danger {
+    color: #dc3545; /* Set error message color */
+    font-size: 14px;
+  }
+  
+  /* Add this style to your component's styles or in a global stylesheet */
+  .registration-form {
+    background-color: #ffefd5; /* This is a light orange shade, you can adjust the color code */
+    padding: 20px; /* Add padding for spacing inside the form */
+    border-radius: 10px; /* Add border radius for rounded corners */
+  }
+  
+  /* Optional: Add a box shadow for a subtle effect */
+  .registration-form {
+    box-shadow: 0 4px 10px rgb(248, 92, 19); /* Adjust the shadow as needed */
+    padding-right: 40px;
+  }
+  
+  /* Optional: Adjust the border color and width */
+  .registration-form {
+    border: 2px solid #ffa500; /* Border color set to orange */
+  }
+  
+  .registration-form button {
+    color: white;
+    border: none;
+    padding: 5px;
+    margin-right: 20px;
+    border-radius: 4px;
+    border-width: 30% ;
+    font-weight: 20%;
+    cursor: pointer;
+    background-color: #f57e20;
+  }
+  
+  .registration-form button:hover{
+    color: rgb(245, 84, 10);
+    background-color: white;
+    border-radius: 4px;
+    border-color:  rgb(245, 84, 10);
+    box-shadow: 2px 2px 4px rgb(245, 84, 10);
+    border-width: 50%;
+    font-weight: 22%;
+  }
+  
+  .closeBtn {
+    color: rgb(245, 84, 10) !important ;
+    align-self: flex-end; 
+    border-radius: 100%;
+    line-height: 1;
+    position: absolute; 
+    margin-top: -35px;  
+    margin-left: 49%; 
+    cursor: pointer;
+  }
+
+  .refreshBtn{
+    align-self: flex-end; 
+    border-radius: 100%; 
+    color: white; 
+    background-color: rgb(245, 84, 10) ;
+    line-height: 1;
+    position: absolute; 
+    margin-top: -34px;  
+    margin-left: 47%;
+    user-select: none; 
+    font-size: 22px;
+    cursor: pointer;
+  }
+  .closeBtn:hover, .refreshBtn:hover,  .closeButton:hover, .refreshButton:hover{
+    color: rgb(245, 84, 10);
+    background-color: white;
+    border-radius: 100%;
+    border-color:  rgb(245, 84, 10);
+    box-shadow: 2px 2px 4px rgb(245, 84, 10);
+    border-width: 50%;
+    font-weight: 22%;
+  }
+  
+  .closeButton {
+    color: rgb(245, 84, 10) !important ;
+    align-self: flex-end; 
+    border-radius: 100%;
+    line-height: 1;
+    position: absolute; 
+    margin-top: -32px;
+    margin-left: 83%;
+    cursor: pointer;
+  }
+
+  .refreshButton{
+    align-self: flex-end; 
+    border-radius: 100%; 
+    color: white; 
+    background-color: rgb(245, 84, 10) ;
+    line-height: 1;
+    position: absolute; 
+    margin-top: -32px;  
+    margin-left: 78%;
+    user-select: none; 
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+
+  .registration-form select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  
+  .form-control{
+    border-radius: 4px;
+  }
+  
+  label, select, option{
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .error-container {
+    margin-top: 5px; /* Adjust the top margin to provide space between input and error messages */
+    height: 20px; /* Set a fixed height for the error container, adjust as needed */
+    overflow: hidden; /* Hide overflow to keep the space even when there are no errors */
+  }
+  
+  .required {
+    color: red; /* Customize the color of the asterisk */
+    margin-left: 2px; /* Add some space between the label text and the asterisk */
+  }
+  
+  .icon-container, .checkbox-container{
+    user-select: none;
+    cursor: pointer;
+  }
+
+  .icon-container{
+    color: orangered; 
+  }
+
+  .col-md-1, .col-md-10{
+    padding-right: 0px !important;
+    height: 30px;
+  }
+
+  .col-md-3{
+    padding-left: 0px !important;
+  }
+
+
+  .material-icons {
+    font-family: 'Material Icons';
+    cursor: pointer;
+  }
+  
+  .mat-tooltip {
+    background-color: rgb(245, 84, 10) !important;
+    color: #fff;
+  }

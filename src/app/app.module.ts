@@ -14,7 +14,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { AuthServiceService } from './auth-service.service';
-import { UserService } from './user.service';
+import { PartnerService } from './partner.service';
 import { BodyLevelComponent } from './body-level/body-level.component';
 import { LeadersComponent } from './leaders/leaders.component';
 import { ProductComponent } from './product/product.component';
@@ -32,7 +32,16 @@ import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.componen
 import { ScrollIndicatorComponent } from './Additional/scroll-indicator/scroll-indicator.component';
 import { LoaderComponent } from './Additional/loader/loader.component';
 import { CommonModule } from '@angular/common';
-
+import { LoaderService } from './loader.service';
+import { FormComponent } from './Additional/form/form.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ModalDisplayComponent } from './Additional/modal-display/modal-display.component';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { InsightsComponent } from './insight/insights/insights.component';
+import { BlogComponent } from './insight/blog/blog.component';
 
 @NgModule({
   declarations: [
@@ -55,8 +64,13 @@ import { CommonModule } from '@angular/common';
     AlertComponent,
     PrivacyPolicyComponent,
     ScrollIndicatorComponent,
-    LoaderComponent
+    LoaderComponent,
+    FormComponent,
+    ModalDisplayComponent,
+    InsightsComponent,
+    BlogComponent
   ],
+  
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -66,13 +80,18 @@ import { CommonModule } from '@angular/common';
     CarouselModule,
     ReactiveFormsModule,
     CommonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatDialogModule,
+    MatTooltipModule,
     ModalModule.forRoot()
   ],
 
   entryComponents: [
 AlertComponent
   ],
-  providers: [AuthServiceService,UserService],
+  providers: [AuthServiceService,PartnerService, LoaderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

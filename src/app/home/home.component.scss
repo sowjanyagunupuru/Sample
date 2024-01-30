@@ -72,7 +72,7 @@ p {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-top: 25px;
-    margin-bottom: 100px;
+    margin-bottom: 40px;
     .col{
       box-shadow: 0 0 10px rgba(7, 4, 4, 0.1);
       border: 1px solid #ccc;
@@ -84,6 +84,45 @@ p {
     }
 }
 
+.ribbon {
+  width: 60px;
+  font-size: 14px;
+  padding: 4px;
+  position: absolute;
+  right: -25px;
+  top: -12px;
+  text-align: center;
+  border-radius: 25px;
+  transform: rotate(20deg);
+  background-color:rgb(245, 102, 36);;
+  color: white;
+}
+
+.ribbon:hover {
+  width: 60px;
+  font-size: 14px;
+  color: rgb(245, 84, 10);
+  background-color: white;
+  border-color:  rgb(245, 84, 10);
+  box-shadow: 2px 2px 4px rgb(245, 84, 10);
+  border-width: 50%;
+  font-weight: 22%;
+  cursor: pointer;
+}
+
+.regButton {
+  color: rgb(255, 102, 0);
+  font-weight: 70%;
+  font-size: 200%;
+  cursor: pointer; 
+}
+
+.reginfo {
+  margin-left: 310px;
+  color: black;
+  font-weight: 50%;
+  font-size: 200%
+}
 
 @keyframes moveLine {
   from {
@@ -103,3 +142,5 @@ p {
 .blink-text {
   animation: blink 1s infinite;
   }
+
+  

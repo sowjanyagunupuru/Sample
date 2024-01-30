@@ -1,34 +1,41 @@
-
+/* Add this to your global styles or component styles */
 body {
-    padding: 20px;
-    margin: 0;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 5px rgb(245 8 8 / 66%);
-    border-radius: 12px;
-    background-color: #ff7300d4;
-  }
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 15px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  height: 20%;
+  overflow: hidden;
+}
 
-  .error {
-    color: white;
-    background-color: rgb(247, 86, 86);
-    font-size: 16px;
-    width: 500px;
-    padding: 10px;
-    border: 1px solid darkred;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  }
-  
-  .success {
-    color: white;
-    background-color: rgb(117, 238, 117);
-    font-size: 16px;
-    width: 500px;
-    padding: 10px;
-    border: 1px solid darkgreen;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  }
+.error {
+  background-color: #ffdddd;
+  color: #f44336;
+  border-color: darkred;
+}
 
-  .modal-content {
-    width: 40% !important;
-  }
-  
+.success {
+  background-color: #ddffdd;
+  color: #4CAF50;
+  border-color: darkgreen;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close {
+  font-size: 24px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  color: #555;
+}

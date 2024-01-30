@@ -9,7 +9,7 @@ import { Component, HostListener } from '@angular/core';
 export class ScrollIndicatorComponent {
   scrollPercentage: number = 0;
 
-  @HostListener('window:scroll', [])
+  @HostListener('window:scroll')
   onWindowScroll() {
     const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
     const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;

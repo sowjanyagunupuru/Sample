@@ -14,7 +14,7 @@
   justify-content: space-between; /* Space items vertically */
   position: fixed;
   transition: width 0.3s ease; /* Add transition for smooth width changes */
-  padding-top: 40px;
+  padding-top: 55px;
 }
 
 .header {
@@ -44,6 +44,7 @@
     border-radius: 15px;
     white-space: nowrap;
     margin-right: -42px;
+    margin-bottom: 10px;
   }
   
   .menu-option:hover {
@@ -52,11 +53,13 @@
   border-radius: 18px;
   color:  rgb(255, 81, 0);
   box-shadow: 2px 2px 4px rgb(245, 84, 10);
+  margin-bottom: 10px;
   }
   
   .menu-option:not(:hover) {
     background-color: #3b3b3b;
     color: #fff;
+    margin-bottom: 10px;
   }
 
   .dropdown-content{
@@ -80,10 +83,11 @@
     left: 0; /* Adjust the left position if needed */
     color: #fff; /* Set the text color for the button */
     padding-right: 25px;
-    padding-left: 15px;
+    padding-left: 10px;
+    margin-top: 10px;
     padding-top: 5px;
     padding-bottom: 8px;
-    font-size: 11px;
+    font-size: 16px;
     display: flex;
   }
 

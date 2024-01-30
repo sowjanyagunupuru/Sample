@@ -16,6 +16,11 @@ import { BrochureComponent } from './brochure/brochure.component';
 import { ClientComponent } from './client/client.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { ModalDisplayComponent } from './Additional/modal-display/modal-display.component';
+import { InsightsComponent } from './insight/insights/insights.component';
+import { BlogComponent } from './insight/blog/blog.component';
+
+
 
 
 const routes: Routes = [
@@ -34,6 +39,9 @@ const routes: Routes = [
 { path: 'client', component: ClientComponent },
 { path: 'sidebar', component: SidebarComponent },
 { path: 'privacyPolicy' , component: PrivacyPolicyComponent },
+{ path: 'modal' , component: ModalDisplayComponent},
+{ path: 'insight', component: InsightsComponent},
+{ path: 'blog', component: BlogComponent},
 { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];
 

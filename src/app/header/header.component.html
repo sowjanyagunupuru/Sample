@@ -1,9 +1,10 @@
 
 <div class="header">
-  <div class="logo-container">
-    <img style=" user-select: none; cursor: default; " src="https://pennanttech.com/wp-content/uploads/2021/08/Pennant-logo-color-1.png">
-  </div>
-  <div *ngIf="!isLoginPage()" class="menu" >
+ 
+  <div class="menu" >
+    <div class="logo-container">
+      <img style=" user-select: none; cursor: default; " src="https://pennanttech.com/wp-content/uploads/2021/08/Pennant-logo-color-1.png">
+    </div>
       <ul>
         <li [ngClass]="{'active': activeItem === 'home'}"><a (click)="home()">Home </a></li>
         <li [ngClass]="{'active': activeItem === 'product'}"><a (click)="product()">Products </a></li>
@@ -20,11 +21,9 @@
         </li>
         <li [ngClass]="{'active': activeItem === 'contact'}"><a (click)="contact()">Contact</a></li>
         <li [ngClass]="{'active': activeItem === 'more'}"><a (click)="more()">More </a></li>
-        <!-- <li *ngIf="!log()"><a (click)="signIn()">Login</a></li>
-        <li *ngIf="log()"><a (click)="signOut()">Logout</a></li> -->
-        <li id="time">
-      <span>Time: {{ currentTime | date: 'mediumTime' }}</span>
-      </li>
+        <li><a  id = "demo" (click)="showRegistrationForm()">Request a Demo <i style="padding-top: 10px ; line-height : 1" class="fa fa-play-circle" id="videoPlayButton"></i>
+        </a></li>
+        <!-- <li id="time"><span>Time: {{ currentTime | date: 'mediumTime' }}</span></li> -->
       </ul>
   </div>
 </div>

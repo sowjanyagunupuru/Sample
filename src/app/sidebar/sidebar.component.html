@@ -13,7 +13,7 @@
                 </div>
                 <div class="dropdown-content" *ngIf="showDropdown.partnerEcosystem">
                     <div class="menu-option" (click)="selectedOption('Partners')">
-                        <i class="fas fa-users"></i><span *ngIf="!isCollapsed">Partners</span>
+                        <i class="fas fa fa-handshake-o"></i><span *ngIf="!isCollapsed">Partners</span>
                     </div>
                     <div class="menu-option" (click)="selectedOption('BecomePartner')">
                         <i class="fas fa-user-plus"></i><span *ngIf="!isCollapsed"> Become a Partner </span>
@@ -21,17 +21,18 @@
                 </div>
                 <div class="menu-option" (click)="selectedOption('Clients')">
                     <i class="fas fa-building"></i><span *ngIf="!isCollapsed">Clients</span>
-                </div>
-                <div class="menu-option" (click)="selectedOption('Products')">
-                    <i class="fas fa-box"></i><span *ngIf="!isCollapsed">Products</span>
-                </div>
+                  </div>
+                  
+                <div class="menu-option" (click)="selectedOption('Brochures')">
+                    <i class="fas fa-box"></i><span *ngIf="!isCollapsed">Brochures</span>
+                </div>                  
             </div>
         </div>
         <div class="collapse-btn" style="position: fixed !important;  user-select: none;
         cursor: pointer; " (click)="toggleCollapse()">
            
-            <i class="fas" [ngClass]="{'fa-chevron-left': !isCollapsed, 'fa-chevron-right': isCollapsed}"></i><span *ngIf="!isCollapsed"> Collapse</span>
-            
+           <i class="fas" [ngClass]="{'fa fa-hand-o-left': !isCollapsed, 'fa fa-hand-o-right': isCollapsed}" style="line-height: 1.5;"></i><span *ngIf="!isCollapsed">&nbsp;Collapse</span>
+        	<!-- fa fa-angle-double-left -->
         </div>
     </div>
 </body>

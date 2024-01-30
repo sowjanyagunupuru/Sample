@@ -31,10 +31,6 @@ export class BodyLevelComponent implements OnInit {
     }, 1000);
   }
 
-ngAfterViewInit()
-{
-    // this.authService.hide();
-  }
  
   handleSelectedOption(value: string) {//to get the selected option from the sidemenu
     this.option = value;

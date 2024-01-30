@@ -11,6 +11,7 @@ import { LoaderService } from './loader.service';
 })
 export class AppComponent {
   title = 'Sample';
+  isAboutHover:boolean=false;
 
   constructor(private router: Router , private authService: AuthServiceService,private loaderService: LoaderService,  private viewportScroller: ViewportScroller) {
     this.router.events.subscribe(event => {
@@ -20,12 +21,15 @@ export class AppComponent {
     });
   }
 
-  scrollToTop() {
-    this.viewportScroller.scrollToPosition([0, 0]);
+  isLoading: boolean = false;
+  //to make the page overlay while the loader runs
+  ngOnInit() {
+    this.loaderService.loaderVisible$.subscribe((isVisible) => {
+      this.isLoading = isVisible;
+    });
   }
 
-
-  loadContent() {
+  loadContent() {// to load the content of the page by showing the loader
     this.loaderService.showLoader();
 
     // Simulate loading different components
@@ -39,4 +43,26 @@ export class AppComponent {
       this.loaderService.hideLoader();
     }, 2000);
   }
+
+
+  isButtonVisible: boolean = false;
+  //to stop the visibility of the scrollToTop button at the initial position of the page
+    @HostListener('window:scroll', ['$event'])
+    onWindowScroll() {
+      // Set a scroll threshold, adjust as needed
+      const scrollThreshold = 200;
+  
+      // Check the scroll position
+      if (window.pageYOffset > scrollThreshold) {
+        this.isButtonVisible = true;
+      } else {
+        this.isButtonVisible = false;
+      }
+    }
+    
+  scrollToTop() {//to move to top of the page
+    this.viewportScroller.scrollToPosition([0, 0]);
+    this.isAboutHover = !this.isAboutHover;
+  }
+ 
 }

@@ -3,6 +3,9 @@ import { AuthServiceService } from '../auth-service.service';
 import { Router, NavigationEnd } from '@angular/router';
 import { Location } from '@angular/common';
 import { LoaderService } from '../loader.service';
+import { MatDialog } from '@angular/material/dialog';
+import { ModalDisplayComponent } from '../Additional/modal-display/modal-display.component';
+
 
 @Component({
   selector: 'app-header',
@@ -12,23 +15,24 @@ import { LoaderService } from '../loader.service';
 
 export class HeaderComponent implements OnInit {
   username: string = 'User';
-  currentTime: Date = new Date();
+  // currentTime: Date = new Date();
   homeData: string = '';
   isAboutClicked:boolean=false;
   activeItem: string | null = null;
   
   
-  constructor(private location: Location, private authService: AuthServiceService, private router: Router, private renderer: Renderer2, private el: ElementRef, private loaderService : LoaderService) {
+  constructor(private location: Location, private authService: AuthServiceService, private router: Router, 
+    private renderer: Renderer2, private el: ElementRef, private loaderService : LoaderService,  private dialog: MatDialog) {
   }
 
   Title ="PENNANT";
    ngOnInit(): void {
      // Update the current time every second
-     setInterval(() => {
-      this.currentTime = new Date();
-    }, 1000);
+    //  setInterval(() => {
+    //   this.currentTime = new Date();
+    // }, 1000);
 
-    this.router.events.subscribe((event) => {
+    this.router.events.subscribe((event) => {// it happens when a router event occurs
       if (event instanceof NavigationEnd) {
         this.updateActiveItem();
       }
@@ -58,7 +62,6 @@ export class HeaderComponent implements OnInit {
  
   }
 
-
   home() {
     this.router.navigate(['/home']);
      console.log('entering into dashboard');
@@ -87,10 +90,8 @@ export class HeaderComponent implements OnInit {
       this.router.navigate(['/leader']);
     }
   }
-  
 
   contact(){
-
     const url = this.router.url;
     // Check if the loader is not already visible
     if (!url.includes('/contact')) {
@@ -117,49 +118,34 @@ export class HeaderComponent implements OnInit {
     if(loaderElement != null || loaderElement != undefined){
       loaderElement.style.display = 'flex';
     }
-   //to navigate into the more
-  this.router.navigate(['/bodylevel']);
-  }
-  else{
+
+    //to navigate into the more
     this.router.navigate(['/bodylevel']);
-  }
+    }
+    else{
+      this.router.navigate(['/bodylevel']);
+    }
 }
 
+  //to show drop down on hover
   onAboutMouseOver():void
   {
     this.isAboutClicked=true;
   }
   
+  //to hide the dropdown on leave
   onAboutMouseOut():void{
     this.isAboutClicked=false;
   }
 
+  //to show and hide the dropdown on click on About option
   toggleAboutDropdown() {
     this.isAboutClicked = !this.isAboutClicked;
   }
-  
-   log(): boolean {
-    return this.authService.getIsLoggedIn();
-   }
 
-   signIn() {
-     this.router.navigate(['/login']);
-     console.log('signout and enter in to login page');
-   }
-
-   isLoginPage(): boolean {//this is not make the menu visible when he is in login page
-    return this.router.url === '/login';
+  showRegistrationForm(){
+    const dialogRef = this.dialog.open(ModalDisplayComponent, {
+      width: '55%', // Adjust the width as needed 
+    });
   }
-
-   signOut(){
-    this.authService.setAuthLogin(false);
-    this.router.navigate(['/home']);
-   }
-
-   // Function to go back
-   goBack(): void {
-    this.location.back();
-  }
-
-
 }

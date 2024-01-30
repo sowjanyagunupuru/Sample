@@ -4,10 +4,13 @@
     </div> 
      <div class="scrollBar">  <app-scroll-indicator></app-scroll-indicator> </div>
     
-    <div class="main-content">
-            <app-loader></app-loader>
-            <router-outlet></router-outlet>
-            <button (click)="scrollToTop()">^</button>
+     <div class="main-content" [ngClass]="{'overlayed': isLoading}">
+            <app-loader *ngIf="isLoading"></app-loader>
+             <router-outlet></router-outlet>
+             <div class="toolTip" [ngClass]="{'visible': isButtonVisible}">
+                <button (click)="scrollToTop()" class="fa fa-chevron-up" id="scrollButton"></button>
+                <span class="tooltiptext">Click to move TOP.</span>
+              </div>              
             <div id="globalLoader" class="global-loader"><h1>LOADING</h1></div>
     </div> 
     <div class="footer">

@@ -104,3 +104,12 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     background-position: -750% 0;
   }
 }
+
+body{
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+::selection { // to make this style while selecting the text
+  color: white;
+  background: rgb(245, 129, 46) !important;
+}

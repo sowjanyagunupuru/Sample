@@ -47,10 +47,14 @@
       <li><p class="d-inline">To know more about us </p>
         <a [routerLink]="['/bodylevel']" class="blink-text text-danger">Go to More</a> </li> 
     </div>  
-    <div class="col"> 
+    <div class="col" > <span class="ribbon">NEW</span>
       <li><p class="d-inline">To know about the clients and partners </p>
-        <a [routerLink]="['/bodylevel']" class="blink-text text-danger">Go to More</a></li>  
+        <a [routerLink]="['/bodylevel']" class="blink-text text-danger">Go to More</a> </li>  
     </div>
   </div>
-</div>
 
+  <div class="form">
+    <p class="d-inline reginfo"><b>Interested in Pennant’s value proposition?</b></p>
+    <a (click)="showRegistrationForm()" class="d-inline regButton "><b> Get in touch!</b></a>
+  </div>
+</div>

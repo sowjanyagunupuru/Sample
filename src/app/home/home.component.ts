@@ -2,6 +2,8 @@ import { Component, OnInit, Renderer2, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { AuthServiceService } from '../auth-service.service';
+import { MatDialog } from '@angular/material/dialog';
+import { ModalDisplayComponent } from '../Additional/modal-display/modal-display.component';
 
 
 
@@ -12,7 +14,7 @@ import { AuthServiceService } from '../auth-service.service';
 })
 export class HomeComponent  {
 
-  constructor( private router: Router,private authService: AuthServiceService) {}
+  constructor( private router: Router,private authService: AuthServiceService, private dialog: MatDialog) {}
 
 
   slide = [
@@ -32,21 +34,12 @@ export class HomeComponent  {
     return this.authService.getIsLoggedIn();
    }
 
-   onAddProductClick() {
-    if (this.log()) {
-      this.router.navigate(['/bodylevel']);
-    } else {
-      // User is not logged in, so open the login popup
-      this.openLoginPopup();
+   
+      showRegistrationForm(){
+        const dialogRef = this.dialog.open(ModalDisplayComponent, {
+          width: '55%', // Adjust the width as needed 
+        });
+      }
     }
-  }
 
-   openLoginPopup() {
-  //   // Open the login popup
-  //   this.dialog.open(LoginComponent, {
-  //     width: '300px', // Setting the width 
-  //   });
-   }
-
-  }
 

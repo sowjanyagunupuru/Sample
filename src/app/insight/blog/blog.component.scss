@@ -1,0 +1,54 @@
+.background-container {
+    background-image: url('/assets/images/insights/insight.jpg');
+    background-size: cover; /* Adjust as needed */
+    background-position: center; /* Adjust as needed */
+    height: 260px; /* Set a height for the container */
+    position: relative;
+    color: rgb(14, 59, 116); /* Set text color to contrast with the background */
+    padding: 20px; /* Adjust padding as needed */
+  }
+
+  .text-overlay{
+    font-size: 150%;
+    font-style: bold;
+    font-weight: 400;
+    padding: 20px;
+  }
+
+  .head{
+    color: rgb(14, 59, 116);
+    font-size: 220%;
+    font-style: bold;
+    font-weight: 800;
+    margin-left: 110px;
+}
+
+.content{
+    padding: 150px;
+    padding-top: 30px;
+}
+
+h4{
+    color: #666;
+}
+
+h2{
+    color: rgb(245, 129, 46);
+    margin-bottom: 25px;
+    padding-bottom: 0;
+    margin-bottom: 23px;
+    overflow: hidden;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 28px;
+    margin: 0 0 7px 
+}
+
+p {
+    font-size: 18px;
+    font-weight: 300;
+    color: #111!important;
+    letter-spacing: 1px;
+    margin: 0 0 10px;
+    margin-bottom: 20px;
+}

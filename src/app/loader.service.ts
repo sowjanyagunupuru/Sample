@@ -14,12 +14,13 @@ export class LoaderService {
   showLoader() {
     if (!this.isLoaderVisible) {
       this.loaderVisibleSubject.next(true);
-      this.isLoaderVisible = true;
+      // this.isLoaderVisible = true;
     }
   }
 
   hideLoader() {
     this.loaderVisibleSubject.next(false);
-    this.isLoaderVisible = false;
+    // this.isLoaderVisible = false;
   }
+
 }

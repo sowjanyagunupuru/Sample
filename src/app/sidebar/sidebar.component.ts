@@ -1,6 +1,8 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, NgModule, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthServiceService } from '../auth-service.service';
+import { CommonModule } from '@angular/common';
+
 
 interface DropdownVisibility {
   partnerEcosystem: boolean;
@@ -35,7 +37,7 @@ export class SidebarComponent implements OnInit {
   @Output() newSelectedOption = new EventEmitter<string>();//to send the option to the parent class
 
   selectedOption(value: string) {
-    this.newSelectedOption.emit(value);
+    this.newSelectedOption.emit(value);// the selected option is stored into the newSelectedOption in body-level
   }
 
   handleSideMenuClick(event: Event): void {

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthServiceService } from '../auth-service.service';
+import { MatDialog } from '@angular/material/dialog';
+import { ModalDisplayComponent } from '../Additional/modal-display/modal-display.component';
 
 @Component({
   selector: 'app-footer',
@@ -8,12 +10,14 @@ import { AuthServiceService } from '../auth-service.service';
 })
 export class FooterComponent implements OnInit {
 
-  constructor(private authService: AuthServiceService) { }
+  constructor(private authService: AuthServiceService,  private dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
 
-  log(): boolean {
-    return this.authService.getIsLoggedIn();
-   }
+  showRegistrationForm(){
+    const dialogRef = this.dialog.open(ModalDisplayComponent, {
+      width: '55%', // Adjust the width as needed 
+    });
+  }
 }

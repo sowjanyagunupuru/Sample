@@ -3,10 +3,7 @@ import { Inject, Injectable } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { UserService } from './user.service';
-import { BehaviorSubject } from 'rxjs';
-
-
+import { PartnerService } from './partner.service';
 
 @Injectable({
   providedIn: 'root',
@@ -37,18 +34,37 @@ export class AuthServiceService {
     return this.http.post(`/PennantApI/login`, body);
   }
  
-  register(user : UserService): Observable<any> {
-    const body = { name: user.name,
-      username: user.username,
-      contact: user.contact,
-      email: user.email,
-      password: user.password,
-      gender: user.gender,
+  register(partner : PartnerService): Observable<any> {
+    const body = { name: partner.name,
+      username: partner.username,
+      jobTitle: partner.jobTitle,
+      company: partner.company,
+      contact: partner.contact,
+      email: partner.email,
+      password: partner.password,
+      gender: partner.gender,
+      consent: partner.consent,
       active: 1,
       userid:0
     };
     return this.http.post(`/PennantApI/registerPartner`, body, {responseType: 'text'});
   }
+
+
+  downloadFile(): Observable<Blob> {
+    // actual file download URL
+    return this.http.get('https://pennanttech.com/download-brochures/pennApps-Host-Integrator.pdf', {
+      responseType: 'blob'
+    });
+  }
+
+  // downloadFile(fileUrl: string): Observable<Blob> {
+  //   const requestBody = { fileUrl: fileUrl };
+  //   return this.http.post('/download-brochures/download', requestBody, {
+  //     responseType: 'blob'
+  //   });
+  // }
+
 
   setAuthLogin(islog: boolean): Promise<boolean> {
     return new Promise((resolve, reject) => {

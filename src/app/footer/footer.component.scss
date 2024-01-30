@@ -30,6 +30,10 @@ a{
     user-select: none;
     cursor: pointer; 
 }
+  
+a:hover { 
+  text-decoration: none; //to stop the underline on hove over anchor tag
+} 
 
 p{
     color: rgb(199, 196, 196);
@@ -41,12 +45,6 @@ a:hover{
     font-size: 14px;
   }
 
-icon.hover{
-  color: rgb(228, 94, 33);
-  font-size: 20px !important;
-  background: white !important;
-}
-
 h3{
     text-transform: uppercase;
     font-weight: 700;
@@ -55,17 +53,21 @@ h3{
 
 
 .fa {
-    padding: 5px;
+    padding: 6px;
     font-size: 20px;
-    width: 35px;
+    width: 36px;
     text-align: center;
     text-decoration: none;
     margin: 5px 2px;
-    border-radius: 50%;
+    border-radius: 60%;
   }
   
   .fa:hover {
-      opacity: 0.7;
+      color: rgb(255, 83, 3);
+      background: white;
+      border-color:  rgb(255, 83, 3);
+      border-width: 60px;
+      width: 36px;
   }
   
   .fa-facebook {

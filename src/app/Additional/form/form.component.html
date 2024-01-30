@@ -1,0 +1,186 @@
+
+    <form class="registration-form" [formGroup]="registrationForm">
+      <div *ngIf="!becomePartnerForm; else formTemplate">
+          <i (click)="resetForm()" class="material-icons refreshBtn" matTooltip="Click to refresh the Form.">&#xe5d5;</i>
+          <i (click)="close()" class="material-icons closeBtn" matTooltip="Click to Close the Form.">&#xe5c9;</i>
+        </div>
+
+      <ng-template #formTemplate>
+        <div>
+          <i (click)="resetForm()" class="material-icons refreshButton" matTooltip="Click to refresh the Form.">&#xe5d5;</i>
+          <i (click)="close()" class="material-icons closeButton" matTooltip="Click to Close the Form.">&#xe5c9;  </i>     
+        </div>
+      </ng-template>
+
+      <div class="row">
+        <div class="col-md-10">
+          <h1 style="color: rgb(27, 52, 133); font-size: 160%; font-weight: 560; padding-bottom: 10px; line-height: 1;">
+            <ng-content></ng-content>
+            </h1>
+        </div>
+        <div class="col-md-2">
+           </div>
+      </div>
+    
+  
+    <div style="padding-top: 30px !important;" class="row">
+    
+      <div style="padding: 0px !important; padding-left: 15px !important;" class="col-md-6">
+  
+        <div class="form-group">
+          <i class="fa fa-user icon"></i>&nbsp;
+            <label for="username">Username <span class="required">*</span></label>
+            <input type="text" id="username" formControlName="username" placeholder="Username" value="" class="form-control" required>
+            <div class="error-container">
+                <div *ngIf="registrationForm.get('username')?.hasError('required') && registrationForm.get('username')?.touched" class="text-danger">
+                    Username is required.
+                </div>
+                <div *ngIf="registrationForm.get('username')?.hasError('pattern') && registrationForm.get('username')?.touched" class="text-danger">
+                  can't be more than 15 characters.
+              </div>
+            </div>
+          </div>
+        
+          <div class="form-group">
+            <i class="fa fa-font icon"></i>&nbsp; 
+            <label for="name">Name <span class="required">*</span></label>
+            <input type="text" style="text-transform: uppercase;" id="name" formControlName="name" class="form-control">
+            <div class="error-container">
+                <div *ngIf="registrationForm.get('name')?.hasError('required') && registrationForm.get('name')?.touched" class="text-danger">
+                  Name is required.
+                </div>
+                <div *ngIf="registrationForm.get('name')?.hasError('pattern') && registrationForm.get('name')?.touched" class="text-danger">
+                  Name must contain only letters and spaces.
+                </div>
+              </div>
+          </div>                      
+        
+          <div class="form-group">
+            <i class="fa fa-briefcase icon"></i>&nbsp; 
+            <label for="jobTitle">Job Title <span class="required">*</span></label>
+            <input type="text" id="jobTitle" formControlName="jobTitle" class="form-control">
+            <div class="error-container">
+                <div *ngIf="registrationForm.get('jobTitle')?.hasError('required') && registrationForm.get('jobTitle')?.touched" class="text-danger">
+                  Job title  is required.
+                </div>
+              </div>
+          </div>
+
+          <div class="form-group">
+            <i class="fa fa-building icon"></i>&nbsp; 
+            <label for="company">Company <span class="required">*</span></label>
+            <input type="text"  id="company" formControlName="company" class="form-control">
+            <div class="error-container">
+                <div *ngIf="registrationForm.get('company')?.hasError('required') && registrationForm.get('company')?.touched" class="text-danger">
+                  Company is required.
+                </div>
+            </div>
+          </div>
+      </div>
+
+      <div style="padding: 0px !important; padding-left: 34px !important ;" class="col-md-6">
+        
+        <div class="form-group">
+          <i class="fa fa-phone icon"></i>&nbsp;
+          <label for="contact">Contact <span class="required" appNumericOnly>*</span></label>
+          <input type="text" id="contact" formControlName="contact" class="form-control">
+          <div class="error-container">
+              <div *ngIf="registrationForm.get('contact')?.hasError('required') && registrationForm.get('contact')?.touched" class="text-danger">
+                  Contact is required.
+              </div>
+              <div *ngIf="registrationForm.get('contact')?.hasError('pattern') && registrationForm.get('contact')?.touched" class="text-danger">
+                  Contact must start with 6, 7, 8, or 9, followed by 9 digits.
+               </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <i class="fa fa-envelope icon"></i>&nbsp;
+            <label for="email">Email <span class="required">*</span></label>
+            <input type="email" style="text-transform: lowercase;" id="email" formControlName="email" class="form-control" placeholder="Email">
+            <div class="error-container">
+                <div *ngIf="registrationForm.get('email')?.hasError('required') && registrationForm.get('email')?.touched" class="text-danger">
+                    Email is required.
+                  </div>
+                  <div *ngIf="registrationForm.get('email')?.hasError('pattern') && registrationForm.get('email')?.touched" class="text-danger">
+                      Enter a valid email address.
+                  </div>
+            </div>
+          </div>
+          
+          <div  class="form-group">
+            <i class="fa fa-key icon"></i>&nbsp;
+            <label for="password">Password <span class="required">*</span>&nbsp;&nbsp;</label>
+              <div class="row">
+                <div class="col-md-10">
+                  <input type="{{ showPassword ? 'text' : 'password' }}" id="password" formControlName="password" class="form-control" placeholder="Password" />
+                </div>
+                <div class="col-md-2">
+                  <i style="font-size: 22px; cursor: pointer; margin-top: 8px;" (click)="togglePasswordVisibility()" 
+                  [ngClass]="{ 'fa-eye': !showPassword, 'fa-eye-slash': showPassword }" class="fa" ></i>
+                </div>
+            </div>
+            <div class="error-container">
+                  <div *ngIf="registrationForm.get('password')?.hasError('required') && registrationForm.get('password')?.touched" class="text-danger">
+                    Password is required.
+                  </div>
+                  <div *ngIf="registrationForm.get('password')?.hasError('minlength') && registrationForm.get('password')?.touched" class="text-danger">
+                      Password must be at least 8-15 characters long.
+                  </div>
+                  <div *ngIf="registrationForm.get('password')?.hasError('maxlength') && registrationForm.get('password')?.touched" class="text-danger">
+                      Password cannot exceed 15 characters.
+                    </div>
+                  <div *ngIf="registrationForm.get('password')?.hasError('pattern') && registrationForm.get('password')?.touched" class="text-danger">
+                      Need at least one lowercase letter, uppercase letter, a digit, and a special character.
+                  </div>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <i class="fa fa-venus-mars icon"></i>&nbsp;
+            <label for="gender">Gender <span class="required">*</span></label>
+            <select style="text-transform: capitalize;" id="gender" formControlName="gender" class="form-control">
+              <option value="male">Male </option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+            <div class="error-container">
+                <div *ngIf="registrationForm.get('gender')?.hasError('required') && registrationForm.get('gender')?.touched" class="text-danger">
+                    Gender is required.
+                  </div>
+            </div>
+          </div>
+          
+      </div>
+    </div>
+
+    <div class="form-group form-check">
+      <input type="checkbox" id="consent" formControlName="consent" class="form-check-input" style="color: rgb(245, 84, 10);">
+      <label for="consent" class="form-check-label">
+        I consent to receive email communication from Pennant in accordance with the Privacy Policy and understand, I can opt-out at any time.
+      </label>
+    </div>
+
+    <div class="form-group form-check">
+        <div class="row position-relative">
+          <div class="col-md-1">
+            <div *ngIf="!showSpinner && !showCheck" class="checkbox-container">
+              <input type="checkbox" id="robotCheckbox" formControlName="robotCheckbox" (click)="onCheckboxClick()" class="form-check-input">
+            </div>
+            <div *ngIf="showSpinner || showCheck" class="icon-container">
+              <i *ngIf="showSpinner" class="fa fa-spinner fa-spin" style="font-size:30px;  line-height: 0.5 !important;"></i>
+              <i *ngIf="showCheck" class="material-icons"  id="check" formControlName="check"
+               style="font-size:30px;  line-height: 0.5 !important;">&#xe5ca;</i>
+            </div>
+          </div>
+          <div class="col-md-3" ><label for="robotCheckbox" class="form-check-label"> I am not a robot</label></div>
+        </div>
+    </div>
+
+    <div class="form-group mt-4">
+        <button (click)="onRegistration()" class="btn btn-success" type="button">Register</button>
+    </div>
+
+  </form>
+
+

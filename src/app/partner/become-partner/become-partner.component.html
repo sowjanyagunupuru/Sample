@@ -59,118 +59,15 @@
         </div>
     </div>
 
+    <!-- taken another div because it should not move into other page   -->
     <div  class="row" *ngIf="showForm" >
         <div class="col-md-6">
-            <form class="registration-form" [formGroup]="registrationForm">
-                <h1 style="color: rgb(27, 52, 133); font-weight: 500; padding-bottom: 10px; line-height: 1;">Partner Register: Please fill the form below</h1>
-              
-                <div style="padding: 0px !important;" class="row">
-                  <div style="padding: 0px !important; padding-left: 15px !important ;;" class="col-md-6">
-              
-                    <div class="form-group">
-                      <i class="fa fa-user icon"></i>&nbsp;
-                        <label for="username">Username <span class="required">*</span></label>
-                        <input type="text"  id="username" formControlName="username" placeholder="Username"  class="form-control" required>
-                        <div class="error-container">
-                            <div *ngIf="registrationForm.get('username')?.hasError('required') && registrationForm.get('username')?.touched" class="text-danger">
-                                Username is required.
-                            </div>
-                            <div *ngIf="registrationForm.get('username')?.hasError('pattern') && registrationForm.get('username')?.touched" class="text-danger">
-                              can't be more than 15 characters.
-                          </div>
-                        </div>
-                      </div>
-                    
-                      <div class="form-group">
-                        <i class="fa fa-font icon"></i>&nbsp; 
-                        <label for="name">Name <span class="required">*</span></label>
-                        <input type="text" style="text-transform: uppercase;" id="name" formControlName="name" class="form-control">
-                        <div class="error-container">
-                            <div *ngIf="registrationForm.get('name')?.hasError('required') && registrationForm.get('name')?.touched" class="text-danger">
-                              Name is required.
-                            </div>
-                            <div *ngIf="registrationForm.get('name')?.hasError('pattern') && registrationForm.get('name')?.touched" class="text-danger">
-                              Name must contain only letters and spaces.
-                            </div>
-                          </div>
-                      </div>                      
-                    
-                      <div class="form-group">
-                        <i class="fa fa-phone icon"></i>&nbsp;
-                        <label for="contact">Contact <span class="required">*</span></label>
-                        <input type="text" id="contact" formControlName="contact" class="form-control">
-                        <div class="error-container">
-                            <div *ngIf="registrationForm.get('contact')?.hasError('required') && registrationForm.get('contact')?.touched" class="text-danger">
-                                Contact is required.
-                            </div>
-                            <div *ngIf="registrationForm.get('contact')?.hasError('pattern') && registrationForm.get('contact')?.touched" class="text-danger">
-                                Contact must start with 6, 7, 8, or 9, followed by 9 digits.
-                             </div>
-                        </div>
-                      </div>
-                    
-              
-                  </div>
-                  <div style="padding: 0px !important; padding-left: 34px !important ;" class="col-md-6">
-              
-                    <div class="form-group">
-                      <i class="fa fa-envelope icon"></i>&nbsp;
-                        <label for="email">Email <span class="required">*</span></label>
-                        <input type="email" style="text-transform: lowercase;" id="email" formControlName="email" class="form-control" placeholder="Email">
-                        <div class="error-container">
-                            <div *ngIf="registrationForm.get('email')?.hasError('required') && registrationForm.get('email')?.touched" class="text-danger">
-                                Email is required.
-                              </div>
-                              <div *ngIf="registrationForm.get('email')?.hasError('pattern') && registrationForm.get('email')?.touched" class="text-danger">
-                                  Enter a valid email address.
-                              </div>
-                        </div>
-                      </div>
-                      
-                      <div  class="form-group">
-                        <i class="fa-duotone fa-key icon"></i>&nbsp;
-                        <label for="password">Password <span class="required">*</span></label>
-                        <input type="password" id="password" formControlName="password" class="form-control" placeholder="Password">
-                        <div class="error-container">
-                            <div *ngIf="registrationForm.get('password')?.hasError('required') && registrationForm.get('password')?.touched" class="text-danger">
-                                Password is required.
-                              </div>
-                              <div *ngIf="registrationForm.get('password')?.hasError('minlength') && registrationForm.get('password')?.touched" class="text-danger">
-                                  Password must be at least 8-15 characters long.
-                              </div>
-                              <div *ngIf="registrationForm.get('password')?.hasError('maxlength') && registrationForm.get('password')?.touched" class="text-danger">
-                                  Password cannot exceed 15 characters.
-                                </div>
-                              <div *ngIf="registrationForm.get('password')?.hasError('pattern') && registrationForm.get('password')?.touched" class="text-danger">
-                                  Need at least one lowercase letter, uppercase letter, a digit, and a special character.
-                              </div>
-                        </div>
-                      </div>
-                      
-                      <div class="form-group">
-                        <i class="fa fa-venus-mars icon"></i>&nbsp;
-                        <label for="gender">Gender <span class="required">*</span></label>
-                        <select style="text-transform: capitalize;" id="gender" formControlName="gender" class="form-control">
-                          <option value="male">Male</option>
-                          <option value="female">Female</option>
-                          <option value="other">Other</option>
-                        </select>
-                        <div class="error-container">
-                            <div *ngIf="registrationForm.get('gender')?.hasError('required') && registrationForm.get('gender')?.touched" class="text-danger">
-                                Gender is required.
-                              </div>
-                        </div>
-                      </div>
-                      
-                  </div>
-                </div>
-                <button  (click)="onRegistration()" class="btn btn-success" type="button">Register</button>
-                <button (click)="cLose()" class="btn btn-secondary" type="button">Close</button>
-              
-              </form>
-            
+          <app-form (formClosed)="handleFormClosed($event)">
+            <p>Partner Register: Please fill the form below</p>
+          </app-form>
         </div>
-
-      </div>
-   
+        <div style=" margin-top: 50px;" class="col-md-6">
+          <img style=" margin-top: 20px; user-select: none !important; cursor: default; height: 500px; " class="d-block w-20" src="\assets\images\partner\partnerpick.jpg" alt="partnerpick">
+        </div>
+    </div>
 </div>
